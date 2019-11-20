@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorAccent"
+            android:gravity="end"
+            />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/progress_horizontal"
+            app:titleTextColor="@android:color/white"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_back"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/margin_36"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_account"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_60"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_process_flow"
+        android:layout_marginTop="@dimen/margin_24"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/personal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/personal"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/margin_36"
+        android:layout_marginTop="@dimen/margin_24"
+        app:layout_constraintTop_toBottomOf="@id/process" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/personal"
+        android:layout_marginTop="@dimen/margin_24"
+        app:layout_constraintTop_toBottomOf="@id/process" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload"
+        android:textStyle="bold"
+        android:textColor="@color/colorAsh"
+        android:layout_marginRight="@dimen/margin_36"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/margin_24"
+        app:layout_constraintTop_toBottomOf="@id/process" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintTop_toBottomOf="@id/personal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editext_email"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginRight="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintLeft_toLeftOf="@id/email"
+            app:layout_constraintTop_toBottomOf="@id/email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_mail"
+                android:padding="@dimen/margin_16"
+                android:hint="@string/email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintTop_toBottomOf="@id/editext_email" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editext_phone"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginRight="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintLeft_toLeftOf="@id/phone"
+            app:layout_constraintTop_toBottomOf="@id/phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_call"
+                android:padding="@dimen/margin_16"
+                android:hint="@string/phone_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/state"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintTop_toBottomOf="@id/editext_phone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/state_layout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginRight="@dimen/margin_36"
+            app:layout_constraintHorizontal_weight=".28"
+            android:background="@drawable/background_outline"
+            app:layout_constraintTop_toBottomOf="@id/state"
+            android:layout_height="60dp">
+
+            <Spinner
+                android:id="@+id/state_spinner"
+                android:layout_width="match_parent"
+                android:spinnerMode="dropdown"
+                android:background="@android:color/transparent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/more_icon"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="@dimen/margin_48"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/state_spinner"
+                android:src="@drawable/ic_expand_more"
+                android:layout_height="60dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintTop_toBottomOf="@id/state_layout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/city_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginLeft="@dimen/margin_36"
+        android:layout_marginRight="@dimen/margin_36"
+        app:layout_constraintHorizontal_weight=".28"
+        android:background="@drawable/background_outline"
+        app:layout_constraintTop_toBottomOf="@id/city"
+        android:layout_height="60dp">
+
+        <Spinner
+            android:id="@+id/city_spinner"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/more_city_icon"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="@dimen/margin_48"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/city_spinner"
+            android:src="@drawable/ic_expand_more"
+            android:layout_height="60dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintTop_toBottomOf="@id/city_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editext_address"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginRight="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintLeft_toLeftOf="@id/address"
+            app:layout_constraintTop_toBottomOf="@id/address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_100dp"
+                android:padding="@dimen/margin_16"
+                android:inputType="textMultiLine"
+                android:hint="@string/address" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/branch"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintTop_toBottomOf="@id/editext_address" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/branch_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginLeft="@dimen/margin_36"
+        android:layout_marginRight="@dimen/margin_36"
+        android:background="@drawable/background_outline"
+        app:layout_constraintTop_toBottomOf="@id/branch"
+        android:layout_height="60dp">
+
+        <Spinner
+            android:id="@+id/branch_spinner"
+            android:layout_width="match_parent"
+            android:padding="@dimen/margin_8"
+            android:background="@android:color/transparent"
+            android:prompt="@string/type_branch"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/more_branch_icon"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="@dimen/margin_48"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/branch_spinner"
+            android:src="@drawable/ic_location"
+            android:layout_height="60dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/comment_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/white"
+            android:elevation="@dimen/margin_16"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/ic_comment"
+            android:layout_marginRight="@dimen/margin_36"
+            app:layout_constraintTop_toBottomOf="@+id/branch_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/margin_36"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_24"
+            android:background="@drawable/button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintTop_toBottomOf="@id/comment_icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

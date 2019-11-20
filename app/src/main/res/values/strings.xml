@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">KinwaeUI</string>
+    <string name="new_account">Open New Account</string>
+    <string name="personal">Personal</string>
+    <string name="contact">Contact</string>
+    <string name="upload">Upload</string>
+    <string name="email"> Email</string>
+    <string name="phone">Phone</string>
+    <string name="phone_text"> +234 | Phone</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="address">Address</string>
+    <string name="branch">Select Preferred Branch</string>
+    <string name="type_branch">Type in Branch Name</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+
+    <string-array name="state_array">
+        <item>Abia</item>
+        <item>Akwa Ibom</item>
+        <item>Delta</item>
+        <item>Edo</item>
+        <item>Jos</item>
+        <item>Lagos</item>
+        <item>Imo</item>
+        <item>Enugu</item>
+    </string-array>
+
+    <string-array name="city_array">
+        <item>Umuhia</item>
+        <item>Uyo</item>
+        <item>Asaba</item>
+        <item>Benin City</item>
+        <item>PortHarcout</item>
+        <item>Ikeja</item>
+        <item>Owerri</item>
+        <item>Enugu</item>
+    </string-array>
+</resources>
