@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity(){
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        val actionBar = supportActionBar
+        actionBar!!.hide()
+
         stateCitySpinner()
         BankSpinner()
     }

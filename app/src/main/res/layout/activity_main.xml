@@ -4,13 +4,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_36"
         android:layout_height="wrap_content">
 
         <ProgressBar
             android:id="@+id/progress_horizontal"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@color/colorAccent"
             android:gravity="end"
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/back"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:drawableLeft="@drawable/ic_back"
                 />
         </androidx.appcompat.widget.Toolbar>
@@ -38,7 +38,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/margin_36"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
